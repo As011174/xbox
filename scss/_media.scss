@@ -1,0 +1,3430 @@
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:540px;
+$xs:539px;
+
+@mixin whb($width , $height , $bg){
+    width: $width;
+    height: $height;
+    background-color: $bg;
+}
+
+
+@mixin flex($flow , $justify , $align , $gap){
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+
+@mixin border($border , $radius , $shadow){
+    border: $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
+
+
+@mixin map($margin , $padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+
+@mixin font($size , $family , $weight , $color , $alin , $lh){
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    text-align: $alin;
+    line-height: $lh;
+}
+
+
+@mixin position($position , $top , $bottom , $left , $right){
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+ }
+ 
+ 
+ @mixin bgimage($bimage , $bposition , $bsize , $brepeat){
+     background-image: $bimage;
+     background-position: $bposition;
+     background-size: $bsize;
+     background-repeat: $brepeat;
+ }
+
+
+@mixin media($value){
+    
+
+
+    @if($value==$xl){
+
+        @media screen and (min-width:1200px){
+            div.wrapper{
+                width: 100%;
+                @include flex(row wrap, center, center, none);
+                >div.headerlg{
+                    display: none;
+                }
+
+                >div.headermd{
+                    display: none;
+                }
+
+                >div.logo{
+                    display: none;
+                }
+
+                >div.box01lg{
+                    display: none;
+                }
+
+                >div.box01lg{
+                    >div.left{
+                        >div.top{
+                            display: none;
+                        }
+                    }
+                }
+
+                >div.box03lg{
+                    display: none;
+                }
+
+                >div.box06lg{
+                    display: none;
+                }
+
+                >div.box08lg{
+                    display: none;
+                }
+
+                >div.box10lg{
+                    display: none;
+                }
+
+                >div.box12lg{
+                    display: none;
+                }
+
+                >div.box14lg{
+                    display: none;
+                }
+
+                >div.box16lg{
+                    display: none;
+                }
+
+                >div.box18lg{
+                    display: none;
+                }
+
+                >div.box25lg{
+                    display: none;
+                }
+
+                >div.box26lg{
+                    display: none;
+                }
+
+                >div.header{
+                   @include whb(100%, 54px, none);
+                   @include flex(row wrap, start, center, 0);
+                   
+                   >div.left{
+                    @include whb(21%, 100%, none);
+                    @include flex(row wrap, center, center, 0);
+                    >div:nth-of-type(1){
+                        @include whb(60%, 100%, none);
+                        @include flex(row wrap, end, center, 0);
+                        >img{
+                            @include whb(56%, 56%, none);
+                            object-fit: contain;
+                        }
+                    }
+
+                    >div:nth-of-type(2){
+                        @include whb(40%, 100%, none);
+                        @include flex(row wrap, end, center, 0);
+                        >img{
+                            @include whb(65%, 65%, none);
+                            object-fit: contain;
+                            @include map(0,0 1% );
+                            
+                        }
+                    }
+                   }
+
+                   >div.menu{
+                    @include whb(49%, 100%, none);
+
+                    nav{
+                        @include whb(100%, 100%, none);
+
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, start, center, 4%);
+
+                            >li{
+                                
+                                @include whb(none, 100%, none);
+                                @include flex(row wrap , center, center , 0);
+                                @include map(0 1%, 0px 0px);
+
+                                >a{
+                                    @include font(14px, Arial Helvetica sans-serif, 100, rgb(51, 40, 40), center, center);
+                                    
+                                     
+                                }
+ 
+                            }
+
+                            >li:nth-of-type(1){
+                                
+                                position: relative;
+                                >div.smenu01{
+                                    @include whb(254.4px, 388.5px, rgb(95%, 95%, 95%));
+                                    position: absolute;
+                                    z-index: 1000;
+                                    top: 54px;
+                                    left: 0;
+                                    
+                                    display: none;
+                                    
+                                    >ul{
+                                        
+                                        @include whb(100%, 100%, none);
+                                        >li{
+                                            @include whb(none, 55.5px, none);
+                                            @include flex(row wrap,left ,center ,none );
+                                            @include map(0px,18px 0px 18px 24px );
+
+                                            >a{
+                                                @include whb(100%, 100%, none);
+                                                @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(79, 76, 76) ,left ,center );
+                                            }
+                                        }
+                                    }
+                                }
+
+                                
+                                &:hover>div.smenu01{
+                                    display: block;
+                                    z-index: 1000;
+                                }
+                                
+                            }
+
+
+                            >li:nth-of-type(2){
+                                
+                                position: relative;
+                                >div.smenu02{
+                                    @include whb(254.4px, 499.5px, rgb(95%, 95%, 95%));
+                                    position: absolute;
+                                    z-index: 1000;
+                                    top: 54px;
+                                    left: 0;
+                                    
+                                    display: none;
+                                    
+                                    >ul{
+                                        
+                                        @include whb(100%, 100%, none);
+                                        >li{
+                                            @include whb(none, 55.5px, none);
+                                            @include flex(row wrap,left ,center ,none );
+                                            @include map(0px,18px 0px 18px 24px );
+
+                                            >a{
+                                                @include whb(100%, 100%, none);
+                                                @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(79, 76, 76) ,left ,center );
+                                            }
+                                        }
+                                    }
+                                }
+
+                                
+                                &:hover>div.smenu02{
+                                    display: block;
+                                    z-index: 1000;
+                                }
+                                
+                            }
+
+                            >li:nth-of-type(3){
+                                
+                                position: relative;
+                                >div.smenu03{
+                                    @include whb(390px, 444px, rgb(95%, 95%, 95%));
+                                    @include flex(row wrap,left , center, none);
+                                    position: absolute;
+                                    z-index: 1000;
+                                    top: 54px;
+                                    left: 0;
+                                    display: none;
+                                    >div.left{
+                                        @include whb(50%, 100%, none);
+
+                                        >ul{
+                                        
+                                            @include whb(100%, 100%, none);
+                                            >li{
+                                                @include whb(none, 55.5px, none);
+                                                @include flex(row wrap,left ,center ,none );
+                                                @include map(0px,18px 0px 18px 24px );
+    
+                                                >a{
+                                                    @include whb(100%, 100%, none);
+                                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(79, 76, 76) ,left ,center );
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    >div.right{
+                                        @include whb(50%, 100%, none);
+
+                                        >ul{
+                                        
+                                            @include whb(100%, 100%, none);
+                                            >li{
+                                                @include whb(none, 55.5px, none);
+                                                @include flex(row wrap,left ,center ,none );
+                                                @include map(0px,18px 0px 18px 24px );
+    
+                                                >a{
+                                                    @include whb(100%, 100%, none);
+                                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(79, 76, 76) ,left ,center );
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover>div.smenu03{
+                                    display: flex;
+                                }
+                                
+                                
+                            }
+
+                            
+                        }
+                    }
+                    }
+
+                    >div.right{
+                        @include whb(30%, 100%, none);
+                        >nav{
+                            @include whb(100%, 100%, none);
+                            >ul{
+                                @include whb(100%, 100%, none);
+                                @include flex(row wrap, start , center, 5%);
+    
+                                >li{
+                                    @include whb(none, 100%, none);
+                                    @include flex(row wrap , center, center , 0px);
+    
+                                    >a{
+                                        @include font(14px, Arial Helvetica sans-serif, 100, rgb(51, 40, 40), center, center);
+                                        @include map(0, 0);
+                                      
+                                    }
+
+                                    >i{
+                                        @include map(5px, 8px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >div.slider{
+                    @include whb(100%, 528px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                        
+                    
+                    >div.Swiper{
+
+                        >div.swiper-wrapper{
+
+                            >div.swiper-slide{
+                                @include whb(100%, 528px, none);
+                                >img{
+                                    @include whb(100%, 100%, none);
+                                    object-fit: cover;
+                                    
+                                }
+                                
+                               
+                               
+                            }
+                        }
+                    }
+
+                    
+
+                    
+                }
+                
+
+                >div.simbol{
+                    @include whb(100%, 141px, none);
+                    @include flex(row wrap, center, center, none);
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, center, center, 55px);
+                            @include map(0px, 0px 0px 0px 10px);
+                            >li{
+                                @include whb(none, 100%, none);
+                                @include flex(row wrap, space-around, start, none);
+                                margin-top: 2%;
+                                
+                                >a{
+                                    @include whb(99px, 56px, none);
+                                    @include flex(row wrap, center, center, none);
+                                    >img{
+                                        @include whb(100%, 100%, none);
+                                        
+
+                                    }
+
+                                    >p{
+                                        @include font(16px, Arial Helvetica sans-serif, 600, rgb(15, 124, 16), center, 34px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >div.box01{
+                    @include whb(100%, 1698px, none);
+                    @include flex(row wrap, center, center, 3px);
+
+                    >div.left{
+                        @include whb(49%, 100%, none);
+                        @include flex(row wrap, center, center,none);
+
+                        >div.top{
+                            @include whb(100%, 846px, none);
+                            @include flex(row wrap, center, center, nnoe);
+                            @include bgimage(url(../img/box01/left01.jpg), center center, cover, no-repeat);
+                            position: relative;
+                            >div.text{
+                                @include whb(586px, 231px, none);
+                                position: absolute;
+                                left: 20px;
+                                bottom: 50px;
+                                >h2{
+                                  @include font(46px, Arial Helvetica sans-serif, 600, white, left, top);
+                                  padding-left: 30px;  
+                                }
+
+                                >p{
+                                    @include font(24px, Arial Helvetica sans-serif, 100, white, left, top);
+                                  padding-left: 30px;
+                                  padding-top: 30px;
+                                }
+
+                                >a{
+                                    @include font(16px, Arial Helvetica sans-serif, 600, white, left, center);
+                                    position: absolute;
+                                    bottom: 0;
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        >div.bottom{
+                            @include whb(100%, 852px, none);
+                            @include flex(row wrap, center, center, none);
+                            >div:nth-of-type(1){
+                              @include whb(50%, 426px, green);
+                              @include bgimage(url(../img/box01/box01-bot01.jpg), center center, cover , no-repeat);
+                                margin-top: 2px;
+                               
+                            }
+
+                            
+
+                            
+                            
+
+                            >div:nth-of-type(2){
+                                @include whb(50%, 426px, green);
+                                margin-top: 2px;
+                                @include flex(row wrap, start, end, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+                            }
+
+                            >div:nth-of-type(3){
+                                @include whb(50%, 426px, green);
+                                margin-top: 2px;
+                                @include flex(row wrap, start, end, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+                            }
+
+                            >div:nth-of-type(4){
+                                @include whb(50%, 426px, green);
+                                @include bgimage(url(../img/box01/box01-bot02.jpg), center center, cover , no-repeat); 
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+
+                    >div.right{
+                        @include whb(50%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.top{
+                            @include whb(100%, 426px, none);
+                            @include flex(row wrap, center, center, none);
+
+                            >div.left{
+                                @include whb(50%, 426px, green);
+                                @include flex(row wrap, start, center, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, justify, center);
+                                    margin-left: 20px;
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+
+                               
+                            }
+
+                            >div.right{
+                                @include whb(50%, 426px, green);
+                                @include flex(row wrap, center, center, none);
+                                @include bgimage(url(../img/box01/box01-right01.jpg), center center, cover, no-repeat);
+                            }
+                        }
+
+                        >div.mid{
+                            @include whb(100%, 846px, none);
+                            @include flex(row wrap, center, center, none);
+                            @include bgimage(url(../img/box01/mid.jpg), center center, cover, no-repeat);
+                            margin-top: 2px;
+                        }
+
+                        >div.bottom{
+                            @include whb(100%, 426px, none);
+                            @include flex(row wrap, center, center, none);
+
+                            >div.left{
+                                @include whb(50%, 426px, green);
+                                margin-top: 2px;
+                                @include flex(row wrap, start, end, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+                                
+                            }
+
+                            >div.right{
+                                @include whb(50%, 426px, green);
+                                @include flex(row wrap, center, center, none);
+                                @include bgimage(url(../img/box01/box01-right02.jpg), center center, cover, no-repeat);
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                }
+
+                >div.box02{
+                    @include whb(99%, 508px, none);
+                    @include flex(row wrap, center, center, none);
+                    @include bgimage(url(../img/box11lg.jpg),center center, cover, no-repeat );
+                    margin-top: 10px;
+                }
+
+                >div.box03{
+                    @include whb(100%, 426px, none);
+                    @include flex(row wrap, center, center, 4px);
+                    margin-top: 10px;
+
+                    >div.left{
+                        @include whb(49%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(50%, 100%, green);
+                            @include flex(row wrap, start, end, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+                        }
+
+                        >div.right{
+                            @include whb(50%, 100%, none);
+                            @include bgimage(url(../img/box03-01.jpg),center center ,cover ,no-repeat);
+                        }
+                    }
+
+                    >div.right{
+                        @include whb(50%, 100%, rgb(222, 150, 150));
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(50%, 100%, green);
+                            @include flex(row wrap, start, end, none);
+                                >h2{
+                                    @include whb(282px, 38px, NONE);
+                                    @include font(34PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                }
+
+                                >p{
+                                    @include whb(282px, 52px, NONE);  
+                                    @include font(24PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                                    padding-bottom: 20px;
+                                }
+
+                                >a{
+                                    @include whb(160px, 40px, NONE); 
+                                    @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+                        }
+
+                        >div.right{
+                            @include whb(50%, 100%, none);
+                            @include bgimage(url(../img/box03-02.jpg),center center ,cover ,no-repeat);
+                        }
+                    }
+                }
+
+                >div.box04{
+                    @include whb(100%, 1272px, none);
+                    @include flex(row wrap, center, center, 4px);
+                    margin: 0 auto;
+                    margin-top: 10px;
+
+                    >div.left{
+                        @include whb(49%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+                        
+                        >div.top{
+                            @include whb(100%, 426px, none);
+                            @include flex(row wrap, center, center, none);
+
+                            >div:nth-of-type(1){
+                                @include whb(50%, 100%, none);
+                                @include flex(row wrap, center, center, none);
+                                @include bgimage(url(../img/box04-top-left.jpg),center center ,cover ,no-repeat);
+                            }
+
+                            >div:nth-of-type(2){
+                                @include whb(50%, 100%, rgb(240, 234, 241));
+                                @include flex(row wrap, center, center, none); 
+                                >span{
+                                    @include whb(300px, 30px, yellow);
+                                    @include flex(row wrap, center, center, none);
+                                }
+
+                                >h2{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(60%, auto, none);
+                                    @include font(34px, Arial Helvetica sans-serif, 600, black, left, center);
+                                }
+
+                                >p{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(80%, auto, none);
+                                    @include font(20px, Arial Helvetica sans-serif, 100, black, left, center);
+                                }
+
+                                >a{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(80%, auto, none);
+                                    @include font(18px, Arial Helvetica sans-serif, 600, black, center, center);
+                                }
+                            } 
+                        }
+
+                        >div.bot{
+                            @include whb(100%, 846px, green);
+                            @include bgimage(url(../img/box20lg.jpg),center center,cover ,none );
+                            position: relative;
+
+                            >div{
+                                @include whb(578px, 231px, none);
+                                position: absolute;
+                                left: 40px;
+                                bottom: 80px;
+                                >span{
+                                    @include whb(auto, auto, yellow);
+                                }
+
+                                >h2{
+                                    @include font(48px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                    @include map(0 ,10px );
+                                }
+
+                                >p{
+                                    @include font(18px, Arial Helvetica sans-serif, 100, white,start ,center );
+                                    @include map(0 ,10px );
+                                }
+
+                                >a{
+
+                                    @include font(16px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                    @include map(0px,20px );
+
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+
+                                
+                                
+                            }
+                        }
+                    }
+
+                    >div.right{
+                        @include whb(50%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.top{
+                            @include whb(100%, 846px, green);
+                            @include bgimage(url(../img/box19lg.jpg),center center,cover ,none );
+                            position: relative;
+
+                            >div{
+                                @include whb(578px, 231px, none);
+                                position: absolute;
+                                left: 40px;
+                                bottom: 80px;
+                                >span{
+                                    @include whb(auto, auto, yellow);
+                                }
+
+                                >h2{
+                                    @include font(48px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                    @include map(0 ,10px );
+                                }
+
+                                >p{
+                                    @include font(18px, Arial Helvetica sans-serif, 100, white,start ,center );
+                                    @include map(0 ,10px );
+                                }
+
+                                >a{
+
+                                    @include font(16px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                    @include map(0px,20px );
+
+                                    &:hover{
+                                        color: yellow;
+                                    }
+                                }
+
+                                
+                                
+                            }
+                            
+                        }
+
+                        >div.bot{
+                            @include whb(100%, 426px, none);
+                            @include flex(row wrap, center, center, none);
+
+                            >div:nth-of-type(1){
+                                @include whb(50%, 100%, white);
+                                @include flex(row wrap, center, center, none);
+
+                                >span{
+                                    @include whb(300px, 30px, yellow);
+                                    @include flex(row wrap, center, center, none);
+                                }
+
+                                >h2{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(60%, auto, none);
+                                    @include font(34px, Arial Helvetica sans-serif, 600, black, left, center);
+                                }
+
+                                >p{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(80%, auto, none);
+                                    @include font(20px, Arial Helvetica sans-serif, 100, black, left, center);
+                                }
+
+                                >a{
+                                    @include flex(row wrap, start, center, none);
+                                    @include whb(80%, auto, none);
+                                    @include font(18px, Arial Helvetica sans-serif, 600, black, center, center);
+                                }
+                            }
+
+                            >div:nth-of-type(2){
+                                @include whb(50%, 100%, rgb(240, 234, 241));
+                                @include flex(row wrap, center, center, none);
+                                @include bgimage(url(../img/bottom02.jpg),center center,cover ,none ); 
+                            }
+                        }
+                        
+                    }
+                }
+
+                >div.box05{
+                    @include whb(100%, 637px, green);
+                    @include flex(row wrap, center, center, none);
+                    @include bgimage(url(../img/box05.jpg),center center ,cover ,no-repeat);
+                }
+
+                >div.box06{
+                    @include whb(100%, 72px, none);
+                    @include flex(ROW wrap, start, center, 0px);
+                    padding: 20px;
+                    >span{
+                        @include whb(auto, 100%, none);
+                        @include flex(ROW wrap, start, center, 15px);
+                        @include font(12px, Arial Helvetica sans-serif, 100, black, center, center);
+                        padding-left: 40px;
+                    }
+
+                    >a{
+                        @include whb(50px, 50px, none);
+                        @include flex(ROW wrap, center, center, 0px);
+
+                        >i{
+                            @include whb(100%, 100%, none);
+                            @include flex(ROW wrap, center, center, 0px);
+                            color: black;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                >div.box07{
+                    @include whb(100%, 324px, rgb(242, 242, 242));
+                    @include flex(row wrap,left ,center ,5px );
+                    padding-left: 70px;
+                    >div{
+                        @include whb(216px,100% ,none );
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            
+                            >li{
+                                @include whb(none, 14.5px, none);
+                                @include map(15px, 0px);
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(80, 76, 76) ,center ,center );
+                                }
+                            }
+
+                            >li:nth-of-type(1){
+                                @include map(50px 0px 0px 0px, 0px);
+                                @include flex(row wrap,left ,center ,5px );
+                                padding-left: 15px;
+                                @include font(14px,Arial Helvetica sans-serif ,600 ,rgb(21, 18, 18) ,center ,center );
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+    }
+
+
+
+
+    @else if($value==$lg) {
+
+        @media screen and (min-width:992px) and (max-width:1200px){
+          div.wrapper{
+            width: 100%;
+
+            >div.header{
+                display: none;
+            }
+
+            >div.headermd{
+                display: none;
+            }
+
+            >div.logo{
+                display: none;
+            }
+
+            >div.box01lg{
+                display: none;
+            }
+
+            >div.box01lg{
+                >div.left{
+                    >div.top{
+                        display: none;
+                    }
+                }
+            }
+
+            >div.box03lg{
+                display: none;
+            }
+
+            >div.box06lg{
+                display: none;
+            }
+
+            >div.box08lg{
+                display: none;
+            }
+
+            >div.box10lg{
+                display: none;
+            }
+
+            >div.box12lg{
+                display: none;
+            }
+
+            >div.box14lg{
+                display: none;
+            }
+
+            >div.box16lg{
+                display: none;
+            }
+
+            >div.box18lg{
+                display: none;
+            }
+
+            >div.box25lg{
+                display: none;
+            }
+
+            >div.box26lg{
+                display: none;
+            }
+
+            >div.headerlg{
+                @include whb(100%, 54px, none);
+                @include flex(row wrap ,center ,center , 4px );
+
+                >div.left{
+                    @include whb(27%, 100%, none);
+                    @include flex(row wrap, center, center, 0px);
+                    padding-left: 8px;
+                     >div:nth-of-type(1){
+                        @include whb(60%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+                        >img{
+                            @include whb(70%, 70%, none);
+                            object-fit: contain;
+                        }
+                     }
+
+                     >div:nth-of-type(2){
+                        @include whb(40%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+                        >img{
+                            @include whb(75%, 70%, none);
+                            object-fit: contain;
+                            padding-left: 7px;
+                        }
+                     }
+                }
+
+                >div.menu{
+                    @include whb(45%, 100%, none);
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap,start ,center , 20px);
+                            >li{
+                                @include whb(none, 100%,none);
+                                @include flex(row wrap, center, center, 0px);
+                                @include map(0px 8px, 0px);
+                                >a{
+                                    @include font(14px, Arial Helvetica sans-serif, 100, rgb(75, 91, 96), center, 54px);
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+
+                >div.right{
+                    @include whb(27%, 100%, none);
+                    @include flex(row wrap, center, center, none);
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, start, center, none);
+                            >li{
+                                @include whb(none, 100%,none);
+                                @include flex(row wrap, center, center, 0px);
+                                @include map(0px 8px, 0px);
+                                >a{
+                                    @include font(14px, Arial Helvetica sans-serif, 100, rgb(75, 91, 96), center, 54px);
+                                    padding-left: 10px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >div.slider{
+                @include whb(100%, 528px, none);
+                @include flex(row wrap, center, center, none);
+                
+                    
+                
+                >div.mySwiper{
+
+                    >div.swiper-wrapper{
+
+                        >div.swiper-slide{
+                            @include whb(100%, 528px, none);
+                            >img{
+                                @include whb(100%, 100%, none);
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+
+            >div.simbol{
+                @include whb(100%, 136px, none);
+                @include flex(row wrap, center, center, none);
+                >nav{
+                    @include whb(100%, 100%, none);
+                    >ul{
+                        @include whb(100%, 100%, none);
+                        @include flex(row wrap, center, center, 35px);
+                        @include map(0px, 0px 0px 0px 10px);
+                        >li{
+                            @include whb(none, 100%, none);
+                            @include flex(row wrap, space-around, start, none);
+                            margin-top: 3%;
+                            
+                            >a{
+                                @include whb(99px, 56px, none);
+                                @include flex(row wrap, center, center, none);
+                                >img{
+                                    @include whb(90%, 90%, none);
+                                    
+
+                                }
+
+                                >p{
+                                    @include font(16px, Arial Helvetica sans-serif, 600, rgb(15, 124, 16), center, 34px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >div.box01{
+                @include whb(100%, 1698px, none);
+                @include flex(row wrap, center, center, 3px);
+
+                >div.left{
+                    @include whb(49%, 100%, none);
+                    @include flex(row wrap, center, center,none);
+
+                    >div.top{
+                        @include whb(100%, 846px, none);
+                        @include flex(row wrap, center, center, nnoe);
+                        @include bgimage(url(../img/box01/left01.jpg), center center, cover, no-repeat);
+                        position: relative;
+                        >div.text{
+                            @include whb(502px, 231px, none);
+                            position: absolute;
+                            left: 20px;
+                            bottom: 50px;
+                            >h2{
+                              @include font(46px, Arial Helvetica sans-serif, 600, white, left, top);
+                              padding-left: 30px;  
+                            }
+
+                            >p{
+                                @include font(24px, Arial Helvetica sans-serif, 100, white, left, top);
+                              padding-left: 30px;
+                              padding-top: 30px;
+                            }
+
+                            >a{
+                                @include font(16px, Arial Helvetica sans-serif, 600, white, left, center);
+                                position: absolute;
+                                bottom: 0;
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+
+                    >div.bottom{
+                        @include whb(100%, 852px, none);
+                        @include flex(row wrap, center, center, none);
+                        >div:nth-of-type(1){
+                          @include whb(50%, 426px, green);
+                          @include bgimage(url(../img/box01/box01-bot01.jpg), center center, cover , no-repeat);
+                          margin-top: 2px;
+                        }
+
+                        
+
+                        >div:nth-of-type(2){
+                            @include flex(row wrap, center, center, none);
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                            
+                        }
+
+                        >div:nth-of-type(3){
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            @include flex(row wrap, center, center, none);
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                        }
+
+                        >div:nth-of-type(4){
+                            @include whb(50%, 426px, green);
+                            @include bgimage(url(../img/box01/box01-bot02.jpg), center center, cover , no-repeat); 
+                            margin-top: 2px;
+                        }
+                    }
+                }
+
+                >div.right{
+                    @include whb(50%, 100%, none);
+                    @include flex(row wrap, center, center, none);
+
+                    >div.top{
+                        @include whb(100%, 426px, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(50%, 426px, green);
+                            @include flex(row wrap, center, center, none);
+                            
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                        }
+
+                        >div.right{
+                            @include whb(50%, 426px, green);
+                            @include flex(row wrap, center, center, none);
+                            @include bgimage(url(../img/box01/box01-right01.jpg), center center, cover, no-repeat);
+                        }
+                    }
+
+                    >div.mid{
+                        @include whb(100%, 846px, none);
+                        @include flex(row wrap, center, center, none);
+                        @include bgimage(url(../img/box01/mid.jpg), center center, cover, no-repeat);
+                        margin-top: 2px;
+                    }
+
+                    >div.bottom{
+                        @include whb(100%, 426px, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(50%, 426px, green);
+                            @include flex(row wrap, center, center, none);
+                            margin-top: 2px;
+
+                            
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                        }
+
+                        >div.right{
+                            @include whb(50%, 426px, green);
+                            @include flex(row wrap, center, center, none);
+                            @include bgimage(url(../img/box01/box01-right02.jpg), center center, cover, no-repeat);
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+
+            >div.box02{
+                @include whb(99%, 508px, none);
+                @include flex(row wrap, center, center, none);
+                @include bgimage(url(../img/box11lg.jpg),center center, cover, no-repeat );
+                margin-top: 10px;
+            }
+
+            >div.box03{
+                @include whb(100%, 426px, none);
+                @include flex(row wrap, center, center, 4px);
+                margin-top: 10px;
+
+                >div.left{
+                    @include whb(49%, 100%, none);
+                    @include flex(row wrap, center, center, none);
+
+                    >div.left{
+                        @include whb(50%, 100%, green);
+                        @include flex(row wrap, center, center, none);
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                        
+                    }
+
+                    >div.right{
+                        @include whb(50%, 100%, none);
+                        @include bgimage(url(../img/box03-01.jpg),center center ,cover ,no-repeat);
+                    }
+                }
+
+                >div.right{
+                    @include whb(50%, 100%, rgb(222, 150, 150));
+                    @include flex(row wrap, center, center, none);
+
+                    >div.left{
+                        @include whb(50%, 100%, green);
+
+                        @include flex(row wrap, center, center, none);
+                            @include whb(50%, 426px, green);
+                            margin-top: 2px;
+                            >h2{
+                                @include whb(236px, 38px, NONE);
+                                @include font(24PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                            }
+
+                            >p{
+                                @include whb(236px, 52px, NONE);  
+                                @include font(18PX, Arial Helvetica sans-serif, 100, WHITE, center, center);
+                            }
+
+                            >a{
+                                @include whb(160px, 40px, NONE); 
+                                @include font(14PX, Arial Helvetica sans-serif, 600, WHITE, center, center);
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+                    }
+
+                    >div.right{
+                        @include whb(50%, 100%, none);
+                        @include bgimage(url(../img/box03-02.jpg),center center ,cover ,no-repeat);
+                    }
+                }
+            }
+
+            >div.box04{
+                @include whb(100%, 1272px, none);
+                @include flex(row wrap, center, center, 4px);
+                margin: 0 auto;
+                margin-top: 10px;
+
+                >div.left{
+                    @include whb(49%, 100%, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                    >div.top{
+                        @include whb(100%, 426px, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div:nth-of-type(1){
+                            @include whb(50%, 100%, none);
+                            @include flex(row wrap, center, center, none);
+                            @include bgimage(url(../img/box04-top-left.jpg),center center ,cover ,no-repeat);
+                        }
+
+                        >div:nth-of-type(2){
+                            @include whb(50%, 100%, rgb(240, 234, 241));
+                            @include flex(row wrap, center, center, none); 
+
+                            >span{
+                                @include whb(230px, 30px, yellow);
+                                @include flex(row wrap, center, center, none);
+                            }
+                            
+                            >h2{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(60%, auto, none);
+                                @include font(24px, Arial Helvetica sans-serif, 600, black, left, center);
+                            }
+
+                            >p{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(80%, auto, none);
+                                @include font(16px, Arial Helvetica sans-serif, 100, black, left, center);
+                            }
+
+                            >a{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(80%, auto, none);
+                                @include font(18px, Arial Helvetica sans-serif, 600, black, center, center);
+                            }
+                        }
+                    }
+
+                    >div.bot{
+                        @include whb(100%, 846px, green);
+                        @include bgimage(url(../img/box20lg.jpg),center center,cover ,none );
+                        position: relative;
+                        >div{
+                            @include whb(420px, 231px, none);
+                            position: absolute;
+                            left: 40px;
+                            bottom: 80px;
+                            >span{
+                                @include whb(auto, auto, yellow);
+                            }
+
+                            >h2{
+                                @include font(48px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                @include map(0 ,10px );
+                            }
+
+                            >p{
+                                @include font(18px, Arial Helvetica sans-serif, 100, white,start ,center );
+                                @include map(0 ,10px );
+                            }
+
+                            >a{
+
+                                @include font(16px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                @include map(0px,20px );
+
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+
+                            
+                            
+                        }
+                    }
+                }
+
+                >div.right{
+                    @include whb(50%, 100%, none);
+                    @include flex(row wrap, center, center, none);
+
+                    >div.top{
+                        @include whb(100%, 846px, green);
+                        @include bgimage(url(../img/box19lg.jpg),center center,cover ,none );
+                        position: relative;
+
+                        >div{
+                            @include whb(420px, 231px, none);
+                            position: absolute;
+                            left: 40px;
+                            bottom: 80px;
+                            >span{
+                                @include whb(auto, auto, yellow);
+                            }
+
+                            >h2{
+                                @include font(48px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                @include map(0 ,10px );
+                            }
+
+                            >p{
+                                @include font(18px, Arial Helvetica sans-serif, 100, white,start ,center );
+                                @include map(0 ,10px );
+                            }
+
+                            >a{
+
+                                @include font(16px, Arial Helvetica sans-serif, 600, white,start ,center );
+                                @include map(0px,20px );
+
+                                &:hover{
+                                    color: yellow;
+                                }
+                            }
+
+                            
+                            
+                        }
+
+                    }
+
+                    >div.bot{
+                        @include whb(100%, 426px, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div:nth-of-type(1){
+                            @include whb(50%, 100%, white);
+                            @include flex(row wrap, center, center, none);
+                            >span{
+                                @include whb(230px, 30px, yellow);
+                                @include flex(row wrap, center, center, none);
+                            }
+                            
+                            >h2{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(60%, auto, none);
+                                @include font(24px, Arial Helvetica sans-serif, 600, black, left, center);
+                            }
+
+                            >p{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(80%, auto, none);
+                                @include font(16px, Arial Helvetica sans-serif, 100, black, left, center);
+                            }
+
+                            >a{
+                                @include flex(row wrap, start, center, none);
+                                @include whb(80%, auto, none);
+                                @include font(18px, Arial Helvetica sans-serif, 600, black, center, center);
+                            }
+                        }
+
+                        >div:nth-of-type(2){
+                            @include whb(50%, 100%, rgb(240, 234, 241));
+                            @include flex(row wrap, center, center, none);
+                            @include bgimage(url(../img/bottom02.jpg),center center,cover ,none ); 
+                        }
+                    }
+                    
+                }
+            }
+
+            >div.box05{
+                @include whb(100%, 637px, green);
+                @include flex(row wrap, center, center, none);
+                @include bgimage(url(../img/box05.jpg),center center ,cover ,no-repeat);
+            }
+
+            >div.box06{
+                @include whb(100%, 72px, none);
+                    @include flex(ROW wrap, start, center, 0px);
+                    padding: 20px;
+                    >span{
+                        @include whb(auto, 100%, none);
+                        @include flex(ROW wrap, start, center, 15px);
+                        @include font(12px, Arial Helvetica sans-serif, 100, black, center, center);
+                        padding-left: 40px;
+                    }
+
+                    >a{
+                        @include whb(50px, 50px, none);
+                        @include flex(ROW wrap, center, center, 0px);
+
+                        >i{
+                            @include whb(100%, 100%, none);
+                            @include flex(ROW wrap, center, center, 0px);
+                            color: black;
+                            font-size: 22px;
+                        }
+                    }
+            }
+
+            >div.box07{
+                @include whb(100%, 324px, rgb(242, 242, 242));
+                @include flex(row wrap,left ,center ,5px );
+                padding-left: 70px;
+                >div{
+                    @include whb(216px,100% ,none );
+                    >ul{
+                        @include whb(100%, 100%, none);
+                        
+                        >li{
+                            @include whb(none, 14.5px, none);
+                            @include map(15px, 0px);
+                            >a{
+                                @include whb(100%, 100%, none);
+                                @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(80, 76, 76) ,center ,center );
+                            }
+                        }
+
+                        >li:nth-of-type(1){
+                            @include map(50px 0px 0px 0px, 0px);
+                            @include flex(row wrap,left ,center ,5px );
+                            padding-left: 15px;
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,rgb(21, 18, 18) ,center ,center );
+                        }
+                    }
+                }
+            }
+            
+
+          }
+        }
+
+    }
+
+
+
+    @else if($value==$md) {
+
+        @media screen and (min-width:768px) and (max-width:992px){
+            div.wrapper{
+                width: 100%;
+                margin: 0 auto;
+                >div.header{
+                    display: none;
+                }
+
+                >div.headermd{
+                    display: none;
+                }
+
+                >div.logo{
+                    display: none;
+                }
+
+                >div.box06{
+                    display: none;
+                }
+
+                >div.box07{
+                    display: none;
+                }
+                
+                >div.headerlg{
+                    @include whb(100%, 54px, none);
+                    @include flex(row wrap ,center ,center , 2px );
+    
+                    >div.left{
+                        @include whb(27%, 100%, none);
+                        @include flex(row wrap, center, center, 0px);
+                        padding-left: 4px;
+                         >div:nth-of-type(1){
+                            @include whb(60%, 100%, none);
+                            @include flex(row wrap, center, center, none);
+                            >img{
+                                @include whb(70%, 70%, none);
+                                object-fit: contain;
+                            }
+                         }
+    
+                         >div:nth-of-type(2){
+                            @include whb(40%, 100%, none);
+                            @include flex(row wrap, center, center, none);
+                            >img{
+                                @include whb(75%, 70%, none);
+                                object-fit: contain;
+                                padding-left: 7px;
+                            }
+                         }
+                    }
+    
+                    >div.menu{
+                        @include whb(40%, 100%, none);
+                        >nav{
+                            @include whb(100%, 100%, none);
+                            >ul{
+                                @include whb(100%, 100%, none);
+                                @include flex(row wrap,start ,center , 0px);
+                                >li{
+                                    @include whb(none, 100%,none);
+                                    @include flex(row wrap, center, center, 0px);
+                                    @include map(0px 8px, 0px);
+                                    >a{
+                                        @include font(14px, Arial Helvetica sans-serif, 100, rgb(75, 91, 96), center, 54px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    >div.right{
+                        @include whb(32%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+                        >nav{
+                            @include whb(100%, 100%, none);
+                            >ul{
+                                @include whb(100%, 100%, none);
+                                @include flex(row wrap, start, center, none);
+                                >li{
+                                    @include whb(none, 100%,none);
+                                    @include flex(row wrap, center, center, 0px);
+                                    @include map(0px 8px, 0px);
+                                    >a{
+                                        @include font(14px, Arial Helvetica sans-serif, 100, rgb(75, 91, 96), center, 54px);
+                                        padding-left: 0px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >div.slider{
+                    @include whb(100%, 528px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                        
+                    
+                    >div.mySwiper{
+
+                        >div.swiper-wrapper{
+
+                            >div.swiper-slide{
+                                @include whb(100%, 528px, none);
+                                >img{
+                                    @include whb(100%, 100%, none);
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+    
+                >div.simbol{
+                    @include whb(100%, 136px, none);
+                    @include flex(row wrap, center, center, none);
+                    margin: 0 auto;
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, space-around, center, 35px);
+                            @include map(0px, 0px 0px 0px 10px);
+                            >li{
+                                @include whb(none, 100%, none);
+                                @include flex(row wrap, space-around, start, none);
+                                margin-top: 3%;
+                                
+                                >a{
+                                    @include whb(70px, 56px, none);
+                                    @include flex(row wrap, center, center, none);
+                                    >img{
+                                        @include whb(100%, 100%, none);
+                                        
+    
+                                    }
+    
+                                    >p{
+                                        @include font(12px, Arial Helvetica sans-serif, 600, rgb(15, 124, 16), center, 34px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                >div.box01{
+                    display: none;
+    
+                    
+                }   
+    
+                >div.box02{
+                    display: none;
+                    
+                        
+                    
+                }
+    
+                >div.box03{
+                    display: none;
+                    
+                }
+    
+                >div.box04{
+                    display: none;
+                    
+                }
+    
+                >div.box05{
+                    display: none;
+                    
+                }
+    
+                >div.box01lg{
+                    @include whb(100%, 1082px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 0 auto;
+                    @include bgimage(url(../img/left01.jpg), center center, cover, no-repeat);
+                    position: relative;
+                    >div.text{
+                        @include whb(700px, 263px, none);
+                        position: absolute;
+                        left: 20px;
+                        bottom: 20px;
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+
+                        }
+
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box02lg{
+                    @include whb(100%, 539px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 2px auto;
+                    margin-bottom: 0px;
+                    @include bgimage(url(../img/box02lg.jpg), center center, cover, no-repeat);
+                    
+                    
+                    
+                }
+    
+                >div.box03lg{
+                    @include whb(100%, 305px, green);
+                    margin: 0 auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box04lg{
+                    @include whb(100%, 1082px, green);
+                    margin: 5px auto;
+                    @include bgimage(url(../img/box04lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box05lg{
+                    @include whb(100%, 539px, green);
+                    margin: 5px auto;
+                    margin-bottom: 0;
+                    @include bgimage(url(../img/box05lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box06lg{
+                    @include whb(100%, 281px, green);
+                    margin: 0px auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box07lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    @include bgimage(url(../img/box07lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box08lg{
+                    @include whb(100%, 241px, green);
+                    margin: 0px auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box09lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box09lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box10lg{
+                    @include whb(100%, 241px, green);
+                    margin: 0px auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box11lg{
+                    @include whb(100%, 533px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box11lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box12lg{
+                    @include whb(100%, 320px, rgb(51, 51, 51));
+                    margin: 0 auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box13lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box13lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box14lg{
+                    @include whb(100%, 281px, green);
+                    margin: 0 auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box15lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box15lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box16lg{
+                    @include whb(100%, 241px, green);
+                    margin: 0 auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box17lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box17lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box18lg{
+                    @include whb(100%, 281px, white);
+                    margin: 0 auto;
+                    @include flex(row wrap, center, center, none);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+                        
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,black ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box19lg{
+                    @include whb(100%, 1082px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box19lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box20lg{
+                    @include whb(100%, 1082px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box20lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box21lg{
+                    @include whb(100%, 539px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box21lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box22lg{
+                    @include whb(100%, 241px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box23lg{
+                    @include whb(100%, 533px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box05.jpg), left center, cover, no-repeat);
+                }
+    
+                >div.box24lg{
+                    @include whb(100%, 320px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box25lg{
+                    @include whb(100%, 72px, none);
+                    @include flex(ROW wrap, start, center, 0px);
+                    padding: 20px;
+                    >span{
+                        @include whb(auto, 100%, none);
+                        @include flex(ROW wrap, start, center, 15px);
+                        @include font(12px, Arial Helvetica sans-serif, 100, black, center, center);
+                        padding-left: 40px;
+                    }
+
+                    >a{
+                        @include whb(50px, 50px, none);
+                        @include flex(ROW wrap, center, center, 0px);
+
+                        >i{
+                            @include whb(100%, 100%, none);
+                            @include flex(ROW wrap, center, center, 0px);
+                            color: black;
+                            font-size: 22px;
+                        }
+                    }
+                }
+    
+                >div.box26lg{
+                    @include whb(100%, 536px, rgb(242, 242, 242));
+                    @include flex(row wrap,left ,center ,5px );
+                    padding-left: 70px;
+                    >div{
+                        @include whb(216px,50% ,none );
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            
+                            >li{
+                                @include whb(none, 14.5px, none);
+                                @include map(15px, 0px);
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(80, 76, 76) ,center ,center );
+                                }
+                            }
+    
+                            >li:nth-of-type(1){
+                                @include map(50px 0px 0px 0px, 0px);
+                                @include flex(row wrap,left ,center ,5px );
+                                padding-left: 15px;
+                                @include font(14px,Arial Helvetica sans-serif ,600 ,rgb(21, 18, 18) ,center ,center );
+                            }
+                        }
+                    }
+                }
+              }
+        }
+
+    }
+
+
+
+    @else if($value==$sm) {
+
+        @media screen and (min-width:540px) and (max-width:768px){
+            div.wrapper{
+                width: 100%;
+                margin: 0 auto;
+                >div.header{
+                    display: none;
+                }
+                
+                >div.headerlg{
+                    display: none;
+                }
+
+                >div.box06{
+                    display: none;
+                }
+
+                >div.headermd{
+                    @include whb(100%, 53px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                    >div.left{
+                        @include whb(7%, 100%, none);
+                        @include flex(row wrap, left, center, none);
+                        
+                        >div.icon{
+                            @include whb(100%,100% ,none );
+                            position: relative;
+                            cursor: pointer;
+
+                            >div{
+                                @include whb(45%,2px ,black );
+                                position: absolute;
+                                left: calc(50% - 45% / 2);
+                                transition: 500ms;
+
+                            }
+
+                            &:hover>div:nth-of-type(1){
+                                top: calc(50% - 1px);
+                                transform: rotate(45deg);
+                            }
+
+                            >div:nth-of-type(1){
+                                top: 20px;
+                                
+
+                            }
+
+                            &:hover>div:nth-of-type(2){
+                                left: 40px;
+                                opacity: 0;
+                            }
+                            >div:nth-of-type(2){
+                                top: 25px;
+
+                            }
+
+                            &:hover>div:nth-of-type(3){
+                                top: calc(50% - 1px);
+                                transform: rotate(-45deg);
+                            }
+                            >div:nth-of-type(3){
+                                top:30px;
+                                height: 3px;
+
+                            }
+                        }
+
+                        &:hover>div.smenu{
+                            display: block;
+                        }
+
+                        >div.smenu{
+                            @include whb(99vw, 870px, rgb(242, 242, 242));
+                            position: absolute;
+                            z-index: 1400;
+                            top:53px;
+                            display: none;
+                            >nav{
+                                @include whb(100%,100% ,none );
+                                
+                                >ul{
+                                    @include whb(100%, 100%, none);
+                                    
+                                    >li{
+                                        @include whb(none, 54.3px, none);
+                                        @include map(0, 15px);
+                                        border: 0.5px solid rgb(236, 227, 227);
+                                        >a{
+                                            @include whb(737px, 51.5px, none);
+                                            @include font(16px, Arial Helvetica sans-serif, 100, black, center, center);
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+
+                        
+                        
+                    }
+
+                    >div.menu{
+                        @include whb(93%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(10%, 100%, none);
+                            @include flex( row wrap, center, center, none);
+                        }
+
+                        >div.mid{
+                            @include whb(70%, 100%, none);
+                            @include flex( row wrap , center, center , none);
+                            >img{
+                                @include whb(45%, 45%, none);
+                                object-fit: contain;
+                            }
+                        }
+
+                        >div.right{
+                            @include whb(20%, 100%, none);
+                            @include flex( row wrap , center, center , none);
+
+                            >div:nth-of-type(1){
+                                @include whb(50%, 100%, none);
+                                @include flex( row wrap , center, center , none);
+                            }
+
+                            >div:nth-of-type(2){
+                                @include whb(50%, 100%, none);
+                                @include flex( row wrap , center, center , none);
+                            }
+                        }
+                    }
+
+                    
+                }
+
+
+                >div.logo{
+                    @include whb(20%, 34px, none);
+                    @include flex(row wrap, start, center, none);
+                    >img{
+                        @include whb(70%, 70%, none);
+                        @include flex(row wrap, start, center, none);
+                        object-fit: contain;
+                        padding-left: 15px;
+                    }
+                }
+
+
+                >div.slider{
+                    @include whb(100%, 1075px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                        
+                    
+                    >div.mySwiper{
+
+                        >div.swiper-wrapper{
+
+                            >div.swiper-slide{
+                                @include whb(100%, 1075px, none);
+                                >img{
+                                    @include whb(100%, 100%, none);
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+    
+                >div.simbol{
+                    @include whb(100%, 293px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, center, center, 0px);
+                            
+                            >li{
+                                @include whb(33%, 78px, none);
+                                @include flex(row wrap, center, center, none);
+                                
+                                
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include flex(row wrap, center, center, none);
+                                    >img{
+                                        @include whb(100%, 100%, none);
+                                        
+    
+                                    }
+    
+                                    >p{
+
+                                        @include whb(100px, 23px, none);
+                                        @include font(16px, Arial Helvetica sans-serif, 600, rgb(15, 124, 16), center, 20px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                >div.box01{
+                    display: none;
+    
+                    
+                }   
+    
+                >div.box02{
+                    display: none;
+                    
+                        
+                    
+                }
+    
+                >div.box03{
+                    display: none;
+                    
+                }
+    
+                >div.box04{
+                    display: none;
+                    
+                }
+    
+                >div.box05{
+                    display: none;
+                    
+                }
+
+                >div.box07{
+                    display: none;
+                }
+    
+                >div.box01lg{
+                    @include whb(100%, 572px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 0 auto;
+                    @include bgimage(url(../img/left01.jpg), center center, cover, no-repeat);
+                    position: relative;
+                    >div.text{
+                        @include whb(700px, 263px, none);
+                        position: absolute;
+                        left: 20px;
+                        bottom: 20px;
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+
+                        }
+
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box02lg{
+                    @include whb(100%, 285px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 2px auto;
+                    margin-bottom: 0px;
+                    @include bgimage(url(../img/box02lg.jpg), center center, cover, no-repeat);
+                    
+                    
+                    
+                }
+    
+                >div.box03lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box04lg{
+                    @include whb(100%, 572px, green);
+                    margin: 5px auto;
+                    @include bgimage(url(../img/box04lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box05lg{
+                    @include whb(100%, 285px, green);
+                    margin: 5px auto;
+                    margin-bottom: 0;
+                    @include bgimage(url(../img/box05lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box06lg{
+                    @include whb(100%, 257px, green);
+                    margin: 0px auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box07lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    @include bgimage(url(../img/box07lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box08lg{
+                    @include flex(ROW wrap, center, center, 0px);
+                    @include whb(100%, 233px, green);
+                    margin: 0px auto;
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box09lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box09lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box10lg{
+                    @include flex(ROW wrap, center, center, 0px);
+                    @include whb(100%, 233px, green);
+                    margin: 0px auto;
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box11lg{
+                    @include whb(100%, 317px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box11lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box12lg{
+                    @include whb(100%, 320px, rgb(51, 51, 51));
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box13lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box13lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box14lg{
+                    @include whb(100%, 257px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box15lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box15lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box16lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box17lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box17lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box18lg{
+                    @include whb(100%, 320px, white);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, start, center, 0px);
+                    >div.text{
+                        @include whb(720px,165px ,none);
+
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,black,left ,center );
+                        }
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box19lg{
+                    @include whb(100%, 572px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box19lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box20lg{
+                    @include whb(100%, 572px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box20lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box21lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box21lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box22lg{
+                    @include whb(100%, 272px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box23lg{
+                    @include whb(100%, 317px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box05.jpg), left center, cover, no-repeat);
+                }
+    
+                >div.box24lg{
+                    @include whb(100%, 320px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box25lg{
+                    @include whb(100%, 72px, none);
+                    @include flex(ROW wrap, start, center, 0px);
+                    padding: 20px;
+                    >span{
+                        @include whb(auto, 100%, none);
+                        @include flex(ROW wrap, start, center, 15px);
+                        @include font(12px, Arial Helvetica sans-serif, 100, black, center, center);
+                        padding-left: 40px;
+                    }
+
+                    >a{
+                        @include whb(50px, 50px, none);
+                        @include flex(ROW wrap, center, center, 0px);
+
+                        >i{
+                            @include whb(100%, 100%, none);
+                            @include flex(ROW wrap, center, center, 0px);
+                            color: black;
+                            font-size: 22px;
+                        }
+                    }
+                }
+    
+                >div.box26lg{
+                    @include whb(100%, 489px, rgb(242, 242, 242));
+                    @include flex(row wrap,left ,center ,5px );
+                    padding-left: 70px;
+                    >div{
+                        @include whb(216px,50% ,none );
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            
+                            >li{
+                                @include whb(none, 14.5px, none);
+                                @include map(15px, 0px);
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(80, 76, 76) ,center ,center );
+                                }
+                            }
+    
+                            >li:nth-of-type(1){
+                                @include map(50px 0px 0px 0px, 0px);
+                                @include flex(row wrap,left ,center ,5px );
+                                padding-left: 15px;
+                                @include font(14px,Arial Helvetica sans-serif ,600 ,rgb(21, 18, 18) ,center ,center );
+                            }
+                        }
+                    }
+                }
+              }
+        }
+
+    }
+
+
+
+    @else {
+
+        @media screen and (max-width:539px){
+            div.wrapper{
+                width: 100%;
+                margin: 0 auto;
+                
+                >div.header{
+                    display: none;
+                }
+                
+                >div.headerlg{
+                    display: none;
+                }
+
+                >div.box06{
+                    display: none;
+                }
+
+                >div.headermd{
+                    @include whb(100%, 53px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                    >div.left{
+                        @include whb(7%, 100%, none);
+                        @include flex(row wrap, left, center, none);
+                        
+                        >div.icon{
+                            @include whb(100%,100% ,none );
+                            position: relative;
+                            cursor: pointer;
+
+                            >div{
+                                @include whb(45%,2px ,black );
+                                position: absolute;
+                                left: calc(50% - 45% / 2);
+                                transition: 500ms;
+
+                            }
+
+                            &:hover>div:nth-of-type(1){
+                                top: calc(50% - 1px);
+                                transform: rotate(45deg);
+                            }
+
+                            >div:nth-of-type(1){
+                                top: 20px;
+                                
+
+                            }
+
+                            &:hover>div:nth-of-type(2){
+                                left: 40px;
+                                opacity: 0;
+                            }
+                            >div:nth-of-type(2){
+                                top: 25px;
+
+                            }
+
+                            &:hover>div:nth-of-type(3){
+                                top: calc(50% - 1px);
+                                transform: rotate(-45deg);
+                            }
+                            >div:nth-of-type(3){
+                                top:30px;
+                                height: 3px;
+
+                            }
+                        }
+
+                        &:hover>div.smenu{
+                            display: block;
+                        }
+
+                        >div.smenu{
+                            @include whb(99vw, 870px, rgb(242, 242, 242));
+                            position: absolute;
+                            z-index: 1400;
+                            top:53px;
+                            display: none;
+                            >nav{
+                                @include whb(100%,100% ,none );
+                                
+                                >ul{
+                                    @include whb(100%, 100%, none);
+                                    
+                                    >li{
+                                        @include whb(none, 54.3px, none);
+                                        @include map(0, 15px);
+                                        border: 0.5px solid rgb(236, 227, 227);
+                                        >a{
+                                            @include whb(737px, 51.5px, none);
+                                            @include font(16px, Arial Helvetica sans-serif, 100, black, center, center);
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+
+                        
+                        
+                    }
+
+                    >div.menu{
+                        @include whb(93%, 100%, none);
+                        @include flex(row wrap, center, center, none);
+
+                        >div.left{
+                            @include whb(10%, 100%, none);
+                            @include flex( row wrap, center, center, none);
+                        }
+
+                        >div.mid{
+                            @include whb(70%, 100%, none);
+                            @include flex( row wrap , center, center , none);
+                            >img{
+                                @include whb(45%, 45%, none);
+                                object-fit: cover;
+                            }
+                        }
+
+                        >div.right{
+                            @include whb(20%, 100%, none);
+                            @include flex( row wrap , center, center , none);
+
+                            >div:nth-of-type(1){
+                                @include whb(50%, 100%, none);
+                                @include flex( row wrap , center, center , none);
+                            }
+
+                            >div:nth-of-type(2){
+                                @include whb(50%, 100%, none);
+                                @include flex( row wrap , center, center , none);
+                            }
+                        }
+                    }
+
+                    
+                }
+
+
+                >div.logo{
+                    @include whb(20%, 34px, none);
+                    @include flex(row wrap, start, center, none);
+                    >img{
+                        @include whb(80%, 80%, none);
+                        @include flex(row wrap, start, center, none);
+                        object-fit: contain;
+                        padding-left: 15px
+                    }
+                }
+
+
+                >div.slider{
+                    @include whb(100%, 740px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                        
+                    
+                    >div.mySwiper{
+
+                        >div.swiper-wrapper{
+
+                            >div.swiper-slide{
+                                @include whb(100%, 740px, none);
+                                >img{
+                                    @include whb(100%, 100%, none);
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+    
+                >div.simbol{
+                    @include whb(100%, 223px, none);
+                    @include flex(row wrap, center, center, none);
+                    
+                    >nav{
+                        @include whb(100%, 100%, none);
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            @include flex(row wrap, center, center, 0px);
+                            
+                            >li{
+                                @include whb(33%, 68px, none);
+                                @include flex(row wrap, center, center, none);
+                                
+                                
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include flex(row wrap, center, center, none);
+                                    >img{
+                                        @include whb(50%, 50%, none);
+                                        
+    
+                                    }
+    
+                                    >p{
+
+                                        @include whb(100px, 23px, none);
+                                        @include font(14px, Arial Helvetica sans-serif, 600, rgb(15, 124, 16), center, 20px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                >div.box01{
+                    display: none;
+    
+                    
+                }   
+    
+                >div.box02{
+                    display: none;
+                    
+                        
+                    
+                }
+    
+                >div.box03{
+                    display: none;
+                    
+                }
+    
+                >div.box04{
+                    display: none;
+                    
+                }
+    
+                >div.box05{
+                    display: none;
+                    
+                }
+
+                >div.box07{
+                    display: none;
+                }
+    
+                >div.box01lg{
+                    @include whb(100%, 572px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 0 auto;
+                    @include bgimage(url(../img/left01.jpg), center center, cover, no-repeat);
+                    position: relative;
+                    >div.text{
+                        @include whb(400px, 263px, none);
+                        position: absolute;
+                        left: 20px;
+                        bottom: 20px;
+                        >h2{
+                            @include font(38px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+
+                        }
+
+                        >p{
+                            @include font(22px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(16px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box02lg{
+                    @include whb(100%, 285px, green);
+                    @include flex(row wrap, center, center, none);
+                    margin: 2px auto;
+                    margin-bottom: 0px;
+                    @include bgimage(url(../img/box02lg.jpg), center center, cover, no-repeat);
+                    
+                    
+                    
+                }
+    
+                >div.box03lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box04lg{
+                    @include whb(100%, 572px, green);
+                    margin: 5px auto;
+                    @include bgimage(url(../img/box04lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box05lg{
+                    @include whb(100%, 285px, green);
+                    margin: 5px auto;
+                    margin-bottom: 0;
+                    @include bgimage(url(../img/box05lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box06lg{
+                    @include whb(100%, 257px, green);
+                    margin: 0px auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box07lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    @include bgimage(url(../img/box07lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box08lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0px auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box09lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box09lg.jpg), center center, cover, no-repeat);
+                }
+    
+                >div.box10lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0px auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box11lg{
+                    @include whb(100%, 317px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box11lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box12lg{
+                    @include whb(100%, 320px, rgb(51, 51, 51));
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box13lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box13lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box14lg{
+                    @include whb(100%, 257px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box15lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box15lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box16lg{
+                    @include whb(100%, 233px, green);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,white ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box17lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box17lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box18lg{
+                    @include whb(100%, 320px, white);
+                    margin: 0 auto;
+                    @include flex(ROW wrap, center, center, 0px);
+                    >div.text{
+                        @include whb(420px,165px ,none);
+
+                        >h2{
+                            @include font(28px,Arial Helvetica sans-serif ,600 ,black ,left ,center );
+                        }
+                        >p{
+                            @include font(18px,Arial Helvetica sans-serif ,100 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+
+                        >a{
+                            @include font(14px,Arial Helvetica sans-serif ,600 ,black ,left ,center );
+                            @include map(30px 0px, 0);
+                        }
+                    }
+                }
+    
+                >div.box19lg{
+                    @include whb(100%, 572px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box19lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box20lg{
+                    @include whb(100%, 572px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box20lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box21lg{
+                    @include whb(100%, 285px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box21lg.jpg), top right, cover, no-repeat);
+                }
+    
+                >div.box22lg{
+                    @include whb(100%, 272px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box23lg{
+                    @include whb(100%, 317px, yellow);
+                    margin: 0px auto;
+                    margin-top: 5px;
+                    
+                    @include bgimage(url(../img/box05.jpg), left center, cover, no-repeat);
+                }
+    
+                >div.box24lg{
+                    @include whb(100%, 320px, white);
+                    margin: 0 auto;
+                }
+    
+                >div.box25lg{
+                    @include whb(100%, 72px, none);
+                    @include flex(ROW wrap, start, center, 0px);
+                    padding: 20px;
+                    >span{
+                        @include whb(auto, 100%, none);
+                        @include flex(ROW wrap, start, center, 15px);
+                        @include font(12px, Arial Helvetica sans-serif, 100, black, center, center);
+                        padding-left: 10px;
+                    }
+
+                    >a{
+                        @include whb(30px, 30px, none);
+                        @include flex(ROW wrap, center, center, 30px);
+                        margin-left: 7px;
+                        >i{
+                            @include whb(100%, 100%, none);
+                            @include flex(ROW wrap, center, center, 10px);
+                            color: black;
+                            font-size: 22px;
+                        }
+                    }
+                }
+    
+                >div.box26lg{
+                    @include whb(100%, 489px, rgb(242, 242, 242));
+                    @include flex(row wrap,left ,center ,5px );
+                    padding-left: 20px;
+                    >div{
+                        @include whb(200px,50% ,none );
+                        >ul{
+                            @include whb(100%, 100%, none);
+                            
+                            >li{
+                                @include whb(none, 14.5px, none);
+                                @include map(15px, 0px);
+                                >a{
+                                    @include whb(100%, 100%, none);
+                                    @include font(14px,Arial Helvetica sans-serif ,100 ,rgb(80, 76, 76) ,center ,center );
+                                }
+                            }
+    
+                            >li:nth-of-type(1){
+                                @include map(50px 0px 0px 0px, 0px);
+                                @include flex(row wrap,left ,center ,5px );
+                                padding-left: 15px;
+                                @include font(14px,Arial Helvetica sans-serif ,600 ,rgb(21, 18, 18) ,center ,center );
+                            }
+                        }
+                    }
+                }
+              } 
+        }
+
+    } 
+
+
+}
